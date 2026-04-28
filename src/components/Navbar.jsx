@@ -22,8 +22,9 @@ function Navbar(){
     return(
         <nav className="bg-gray-900 text-white p-4 sticky top-0 z-50">
         <div className="container mx-auto flex items-center justify-between">
-        <h1 className="text-2xl font-bold">🚀 My Website</h1>
-        <ul className="flex space-x-6">
+        <h1 className="text-lg md:text-2xl font-bold">🚀 My Website</h1>
+        <ul className="flex space-x-6 hidden md:flex">
+            
             {/* <li><a className="flex items-center gap-1 hover:text-blue-400" href="#home"><FaHome />Home</a></li>
             <li><a className="flex items-center gap-1 hover:text-blue-400" href="#about"><FaInfoCircle />About</a></li>
             <li><a className="flex items-center gap-1 hover:text-blue-400" href="#services"><FaServicestack />Services</a></li>
