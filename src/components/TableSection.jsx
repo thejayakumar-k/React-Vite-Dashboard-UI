@@ -31,13 +31,15 @@ const tableData = [{
 
 const TableSection = () => {
   return (
-    <div className='container mx-auto p-6'>
-        <h2 className='text-2xl font-bold mb-4'>📊 User Data</h2>
-        <table className=' min-w-full border border-collapse'>
+    <div className='container mx-auto p-4 md:p-6'>
+        <h2 className='text-xl md:text-2xl font-bold mb-4'>📊 User Data</h2>
+
+        <div className='overflow-x-auto'>
+        <table className='min-w-full border border-collapse text-sm md:text-base'>
             <thead>
                 <tr>
                     {tableHeading.map((heading) => (
-                        <th key={heading.colName} className=' bg-gray-300 border border-gray-400 px-4 py-2'>{heading.icon} {heading.colName}</th>
+                        <th key={heading.colName} className=' bg-gray-300 border border-gray-400 px-2 md:px-4 py-2'>{heading.icon} {heading.colName}</th>
                     ))}
                 </tr>
             </thead>
@@ -45,14 +47,17 @@ const TableSection = () => {
                 {
                     tableData.map((user, index) => (
                         <tr key={index} className='border border-gray-300'>
-                            <td className='border border-gray-300 px-4 py-2'><img src={user.avatar} alt={user.name} className='w-10 h-10 rounded-full' /></td>
-                            <td className='border border-gray-300 px-4 py-2'>{user.name}</td>
-                            <td className={`border border-gray-300 px-4 py-2 ${user.status === "Active" ? "text-green-600" : "text-red-600"}`}>{user.status}</td>
+                            <td className='border border-gray-300 px-2 md:px-4 py-2'>
+                                <img src={user.avatar} alt={user.name} className='w-8 h-8 md:w-10 md:h-10 rounded-full' />
+                            </td>
+                            <td className='border border-gray-300 px-2 md:px-4 py-2'>{user.name}</td>
+                            <td className={`border border-gray-300 px-2 md:px-4 py-2 ${user.status === "Active" ? "text-green-600" : "text-red-600"}`}>{user.status}</td>
                         </tr>
 
                     ))}
             </tbody>
         </table>
+        </div>
     </div>
   )
 }
