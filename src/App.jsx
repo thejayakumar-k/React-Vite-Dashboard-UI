@@ -7,19 +7,17 @@ import Navbar from "./components/Navbar";
 import TableSection from "./components/TableSection";
 
 function App() {
-  
-
   return (
     <>
     <Navbar />
     <Header />
     <Hero />
-    <div className="container flex flex-col md:flex-row mx-auto p-6">
-    <main className="flex-1">
-    <Article />
-    <TableSection />
-    </main>
-    <Aside />
+    <div className="container mx-auto px-4 md:px-6 py-6 flex flex-col md:flex-row gap-6">
+      <main className="flex-1">
+        <Article />
+        <TableSection />
+      </main>
+      <Aside />
     </div>
     <Footer />
     </>
